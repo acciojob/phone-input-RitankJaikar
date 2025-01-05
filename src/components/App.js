@@ -8,6 +8,9 @@ const App = () => {
   function handleChange(e) {
     let num = e.target.value;
 
+    if(isNaN(num[num.length-1])) {
+      return;
+    }
     if(num.length > 14) {
       return;
     }
