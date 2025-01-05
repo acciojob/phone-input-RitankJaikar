@@ -8,11 +8,12 @@ const App = () => {
   function handleChange(e) {
     let num = e.target.value;
 
+    if(num.length > 14) {
+      return;
+    }
+
     if(num.length === 1) {
       num = "(" + num;
-    }
-    if(num === "((") {
-      num = "";
     }
 
     if(num.length === 4) {
