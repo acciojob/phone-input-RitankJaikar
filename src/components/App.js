@@ -11,6 +11,9 @@ const App = () => {
     if(num.length === 1) {
       num = "(" + num;
     }
+    if(num === "((") {
+      num = "";
+    }
 
     if(num.length === 4) {
       num = num + ") ";
